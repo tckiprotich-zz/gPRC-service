@@ -13,9 +13,11 @@
     <SourceRoot Include="/home/azureuser/.nuget/packages/" />
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)grpc.tools/2.49.0/build/Grpc.Tools.props" Condition="Exists('$(NuGetPackageRoot)grpc.tools/2.49.0/build/Grpc.Tools.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore/7.0.10/buildTransitive/net6.0/Microsoft.EntityFrameworkCore.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore/7.0.10/buildTransitive/net6.0/Microsoft.EntityFrameworkCore.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore.design/7.0.10/build/net6.0/Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore.design/7.0.10/build/net6.0/Microsoft.EntityFrameworkCore.Design.props')" />
+    <Import Project="$(NuGetPackageRoot)grpc.tools/2.57.0/build/Grpc.Tools.props" Condition="Exists('$(NuGetPackageRoot)grpc.tools/2.57.0/build/Grpc.Tools.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgGrpc_Tools Condition=" '$(PkgGrpc_Tools)' == '' ">/home/azureuser/.nuget/packages/grpc.tools/2.49.0</PkgGrpc_Tools>
+    <PkgGrpc_Tools Condition=" '$(PkgGrpc_Tools)' == '' ">/home/azureuser/.nuget/packages/grpc.tools/2.57.0</PkgGrpc_Tools>
   </PropertyGroup>
 </Project>
