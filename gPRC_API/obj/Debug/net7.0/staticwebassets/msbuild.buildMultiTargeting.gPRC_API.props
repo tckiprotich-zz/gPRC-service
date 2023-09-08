@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/gPRC_API.props" />
+</Project>

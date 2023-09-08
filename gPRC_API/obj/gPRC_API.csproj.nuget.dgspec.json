@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/azureuser/IPHURTS/gPRC-service/gPRC_API/gPRC_API.csproj": {}
+  },
+  "projects": {
+    "/home/azureuser/IPHURTS/gPRC-service/gPRC_API/gPRC_API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/azureuser/IPHURTS/gPRC-service/gPRC_API/gPRC_API.csproj",
+        "projectName": "gPRC_API",
+        "projectPath": "/home/azureuser/IPHURTS/gPRC-service/gPRC_API/gPRC_API.csproj",
+        "packagesPath": "/home/azureuser/.nuget/packages/",
+        "outputPath": "/home/azureuser/IPHURTS/gPRC-service/gPRC_API/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/azureuser/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/snap/dotnet-sdk/216/sdk/7.0.306/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Grpc.AspNetCore": {
+              "target": "Package",
+              "version": "[2.49.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/216/sdk/7.0.306/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
