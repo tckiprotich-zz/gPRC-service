@@ -20,7 +20,7 @@
           "net7.0"
         ],
         "sources": {
-          "/snap/dotnet-sdk/216/sdk/7.0.306/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "/snap/dotnet-sdk/current/sdk/7.0.306/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -83,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/216/sdk/7.0.306/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/current/sdk/7.0.306/RuntimeIdentifierGraph.json"
         }
       }
     }

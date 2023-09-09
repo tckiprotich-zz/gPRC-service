@@ -1,9 +1,12 @@
 using gPRC_API.Services;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
+using gPRC_API.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 //Services INjection
-builder.Services.AddDbContext<AppDbContext>(options => options.useSqlite("Data Source=app.db"));
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite("Data Source=app.db"));
 
 
 builder.Services.AddGrpc();

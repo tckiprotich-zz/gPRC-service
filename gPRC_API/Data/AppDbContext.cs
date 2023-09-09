@@ -14,7 +14,7 @@ namespace gPRC_API.Data
             
         }
         // Dataset
-        public DbSet<ToDoItems> ToDoItems => Set<ToDoItems>();
+        public DbSet<ToDOItems> ToDOItems => Set<ToDOItems>();
         
     }
 }
