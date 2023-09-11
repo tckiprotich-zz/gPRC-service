@@ -1,0 +1,86 @@
+syntax = "proto3";
+
+option csharp_namespace = "gPRC_API";
+
+package greet;
+
+service toDoService{
+
+    // create a new toDo
+    rpc createToDo (createToDoRequest) returns (createToDoResponse){};
+
+    // read sigle toDo
+    rpc readToDo (readToDoRequest) returns (readToDosResponse){};
+
+
+    //read list of toDos
+    rpc readToDos (GetAllRequest) returns (GetAllResponse){};
+
+    //update toDo
+    rpc updateToDo (updateToDoRequest) returns (updateToDoResponse){};
+
+    //delete toDo
+    rpc deleteToDo (deleteToDoRequest) returns (deleteToDoResponse){};
+}
+
+// message for create a new toDo
+message createToDoRequest{
+    string title = 1;
+    string description = 2;
+}
+
+// todo respose
+message createToDoResponse{
+    int32 id = 1;
+}
+
+// message for read a single toDo
+message readToDoRequest{
+    int32 id = 1;
+}
+
+// message for read list of toDos
+message readToDosResponse{
+    int32 id = 1;
+    string title = 2;
+    string description = 3;
+    string status = 4;
+
+}
+
+// all todos
+message GetAllRequest {}
+
+// todo respose
+message GetAllResponse{
+    repeated readToDosResponse toDos = 1;
+}
+
+// message for update a single toDo
+message updateToDoRequest{
+    int32 id = 1;
+    string title = 2;
+    string description = 3;
+    string status = 4;
+}   
+
+// message for update response
+message updateToDoResponse{
+    int32 id = 1;
+    string title = 2;
+    string description = 3;
+    string status = 4;
+}
+
+// message for delete a single toDo
+message deleteToDoRequest{
+    int32 id = 1;
+}
+
+// message for delete response
+message deleteToDoResponse{
+    int32 id = 1;
+}
+
+
+
