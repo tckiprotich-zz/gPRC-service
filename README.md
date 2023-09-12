@@ -1,6 +1,7 @@
 # gPRC-service
 This repository is a collection of my gRPC projects, tutorials, and resources as I explore the world of high-performance API development with gRPC
 
+# gRPC JSON transcoding in ASP.NET Core
 ## what is  gPRC
 
 [gRPC](https://grpc.io/) is a high-performance Remote Procedure Call (RPC) framework. gRPC uses HTTP/2, streaming, Protobuf, and message contracts to create high-performance, real-time services.
