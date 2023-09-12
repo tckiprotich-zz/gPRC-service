@@ -1,86 +1,84 @@
 syntax = "proto3";
 
+// Specifies the namespace for the generated C# classes.
 option csharp_namespace = "gPRC_API";
 
+// Defines the package for the service.
 package greet;
 
+// Defines the toDoService with various RPC methods.
 service toDoService{
 
-    // create a new toDo
+    // RPC method to create a new toDo.
     rpc createToDo (createToDoRequest) returns (createToDoResponse){};
 
-    // read sigle toDo
+    // RPC method to read a single toDo.
     rpc readToDo (readToDoRequest) returns (readToDosResponse){};
 
-
-    //read list of toDos
+    // RPC method to read a list of toDos.
     rpc readToDos (GetAllRequest) returns (GetAllResponse){};
 
-    //update toDo
+    // RPC method to update a toDo.
     rpc updateToDo (updateToDoRequest) returns (updateToDoResponse){};
 
-    //delete toDo
+    // RPC method to delete a toDo.
     rpc deleteToDo (deleteToDoRequest) returns (deleteToDoResponse){};
 }
 
-// message for create a new toDo
+// Message to create a new toDo.
 message createToDoRequest{
-    string title = 1;
-    string description = 2;
+    string title = 1; // Title of the toDo.
+    string description = 2; // Description of the toDo.
 }
 
-// todo respose
+// Response message after creating a toDo.
 message createToDoResponse{
-    int32 id = 1;
+    int32 id = 1; // ID of the created toDo.
 }
 
-// message for read a single toDo
+// Message to read a single toDo.
 message readToDoRequest{
-    int32 id = 1;
+    int32 id = 1; // ID of the toDo to be read.
 }
 
-// message for read list of toDos
+// Response message for a list of toDos.
 message readToDosResponse{
-    int32 id = 1;
-    string title = 2;
-    string description = 3;
-    string status = 4;
-
+    int32 id = 1; // ID of the toDo.
+    string title = 2; // Title of the toDo.
+    string description = 3; // Description of the toDo.
+    string status = 4; // Status of the toDo.
 }
 
-// all todos
+// Request message to get all toDos.
 message GetAllRequest {}
 
-// todo respose
+// Response message for all toDos.
 message GetAllResponse{
-    repeated readToDosResponse toDos = 1;
+    repeated readToDosResponse toDos = 1; // List of toDos.
 }
 
-// message for update a single toDo
+// Message to update a single toDo.
 message updateToDoRequest{
-    int32 id = 1;
-    string title = 2;
-    string description = 3;
-    string status = 4;
+    int32 id = 1; // ID of the toDo to be updated.
+    string title = 2; // New title for the toDo.
+    string description = 3; // New description for the toDo.
+    string status = 4; // New status for the toDo.
 }   
 
-// message for update response
+// Response message after updating a toDo.
 message updateToDoResponse{
-    int32 id = 1;
-    string title = 2;
-    string description = 3;
-    string status = 4;
+    int32 id = 1; // ID of the updated toDo.
+    string title = 2; // Updated title of the toDo.
+    string description = 3; // Updated description of the toDo.
+    string status = 4; // Updated status of the toDo.
 }
 
-// message for delete a single toDo
+// Message to delete a single toDo.
 message deleteToDoRequest{
-    int32 id = 1;
+    int32 id = 1; // ID of the toDo to be deleted.
 }
 
-// message for delete response
+// Response message after deleting a toDo.
 message deleteToDoResponse{
-    int32 id = 1;
+    int32 id = 1; // ID of the deleted toDo.
 }
-
-
-
