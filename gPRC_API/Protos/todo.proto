@@ -3,6 +3,9 @@ syntax = "proto3";
 // Specifies the namespace for the generated C# classes.
 option csharp_namespace = "gPRC_API";
 
+import "google/api/annotations.proto";
+import "google/api/http.proto";
+
 // Defines the package for the service.
 package greet;
 
@@ -10,19 +13,41 @@ package greet;
 service toDoService{
 
     // RPC method to create a new toDo.
-    rpc createToDo (createToDoRequest) returns (createToDoResponse){};
+    rpc createToDo (createToDoRequest) returns (createToDoResponse){
+        option (google.api.http) = {
+            post: "/api/v1/todo"
+            body: "*"
+        };
+    };
 
     // RPC method to read a single toDo.
-    rpc readToDo (readToDoRequest) returns (readToDosResponse){};
+    rpc readToDo (readToDoRequest) returns (readToDosResponse){
+        option (google.api.http) = {
+            get: "/api/v1/todo/{id}"
+        };
+    };
 
     // RPC method to read a list of toDos.
-    rpc readToDos (GetAllRequest) returns (GetAllResponse){};
+    rpc readToDos (GetAllRequest) returns (GetAllResponse){
+        option (google.api.http) = {
+            get: "/api/v1/todo"
+        };
+    };
 
     // RPC method to update a toDo.
-    rpc updateToDo (updateToDoRequest) returns (updateToDoResponse){};
+    rpc updateToDo (updateToDoRequest) returns (updateToDoResponse){
+        option (google.api.http) = {
+            put: "/api/v1/todo/{id}"
+            body: "*"
+        };
+    };
 
     // RPC method to delete a toDo.
-    rpc deleteToDo (deleteToDoRequest) returns (deleteToDoResponse){};
+    rpc deleteToDo (deleteToDoRequest) returns (deleteToDoResponse){
+        option (google.api.http) = {
+            delete: "/api/v1/todo/{id}"
+        };
+    };
 }
 
 // Message to create a new toDo.
